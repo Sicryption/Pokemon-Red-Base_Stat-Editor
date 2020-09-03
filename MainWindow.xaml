@@ -1,0 +1,77 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokeRed_BaseStat_Editor"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="PokeRed_BaseStat_Editor.MainWindow"
+        mc:Ignorable="d"
+        Title="Pokemon Red Base Stat Editor" Height="405.191" Width="1069.81">
+    <Grid Margin="0,0,12,6">
+        <ListBox x:Name="pokemonListbox" HorizontalAlignment="Left" Height="318" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="PokemonListbox_SelectionChanged"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="318" Margin="120,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="914"/>
+        <Image x:Name="pokemonPicture" HorizontalAlignment="Left" Height="100" Margin="131,21,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-2.585,0.284"/>
+
+        <Label x:Name="pokemonName" Content="Pokemon_Name" HorizontalAlignment="Left" Margin="263,46,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="PokeDex ID" HorizontalAlignment="Left" Margin="133,135,0,0" VerticalAlignment="Top"/>
+        <Label Content="HP" HorizontalAlignment="Left" Margin="133,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="ATK" HorizontalAlignment="Left" Margin="133,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="DEF" HorizontalAlignment="Left" Margin="133,225,0,0" VerticalAlignment="Top"/>
+        <Label Content="SPD" HorizontalAlignment="Left" Margin="133,255,0,0" VerticalAlignment="Top"/>
+        <Label Content="SPC" HorizontalAlignment="Left" Margin="133,285,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="pokeid" HorizontalAlignment="Left" Height="23" Margin="209,138,0,0" TextWrapping="Wrap" Text="id" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="hpedit" HorizontalAlignment="Left" Height="23" Margin="209,168,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="atkedit" HorizontalAlignment="Left" Height="23" Margin="209,198,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="defedit" HorizontalAlignment="Left" Height="23" Margin="209,228,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="spdedit" HorizontalAlignment="Left" Height="23" Margin="209,258,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="spcedit" HorizontalAlignment="Left" Height="23" Margin="209,288,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Type 1" HorizontalAlignment="Left" Margin="334,135,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type 2" HorizontalAlignment="Left" Margin="334,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Catch Rate" HorizontalAlignment="Left" Margin="334,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="Base EXP" HorizontalAlignment="Left" Margin="334,225,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sprite Front" HorizontalAlignment="Left" Margin="334,255,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sprite Back" HorizontalAlignment="Left" Margin="334,285,0,0" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="Type1Selection" HorizontalAlignment="Left" Margin="418,138,0,0" VerticalAlignment="Top" Width="120" IsEditable="True"/>
+        <ComboBox x:Name="Type2Selection" HorizontalAlignment="Left" Margin="418,168,0,0" VerticalAlignment="Top" Width="120" IsEditable="True"/>
+
+        <TextBox x:Name="catchRateEdit" HorizontalAlignment="Left" Height="23" Margin="418,198,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="baseExpEdit" HorizontalAlignment="Left" Height="23" Margin="418,228,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="spriteFrontEdit" HorizontalAlignment="Left" Height="23" Margin="418,258,0,0" TextWrapping="Wrap" Text="front.pic" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="spriteBackEdit" HorizontalAlignment="Left" Height="23" Margin="418,288,0,0" TextWrapping="Wrap" Text="back.pic" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Move 1" HorizontalAlignment="Left" Margin="555,135,0,0" VerticalAlignment="Top"/>
+        <Label Content="Move 2" HorizontalAlignment="Left" Margin="555,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Move 3" HorizontalAlignment="Left" Margin="555,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="Move 4" HorizontalAlignment="Left" Margin="555,225,0,0" VerticalAlignment="Top"/>
+        <Label Content="Growth Rate" HorizontalAlignment="Left" Margin="555,255,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sprite Dim" HorizontalAlignment="Left" Margin="555,285,0,0" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="Move1Selection" HorizontalAlignment="Left" Margin="646,138,0,0" VerticalAlignment="Top" Width="172" IsEditable="True"/>
+        <ComboBox x:Name="Move2Selection" HorizontalAlignment="Left" Margin="646,168,0,0" VerticalAlignment="Top" Width="172" IsEditable="True"/>
+        <ComboBox x:Name="Move3Selection" HorizontalAlignment="Left" Margin="646,198,0,0" VerticalAlignment="Top" Width="172" IsEditable="True"/>
+        <ComboBox x:Name="Move4Selection" HorizontalAlignment="Left" Margin="646,228,0,0" VerticalAlignment="Top" Width="172" IsEditable="True"/>
+        <ComboBox x:Name="GrowthRateSelection" HorizontalAlignment="Left" Margin="646,258,0,0" VerticalAlignment="Top" Width="172" IsEditable="True"/>
+
+        <TextBox x:Name="spriteDimX" HorizontalAlignment="Left" Height="23" Margin="646,288,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="30"/>
+        <TextBox x:Name="spriteDimY" HorizontalAlignment="Left" Height="23" Margin="686,288,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="30"/>
+        <DataGrid x:Name="testgrid" HorizontalAlignment="Left" Height="260" Margin="835,21,0,0" VerticalAlignment="Top" Width="191" AutoGenerateColumns="False" FrozenColumnCount="1" GridLinesVisibility="Horizontal" IsReadOnly="True" IsManipulationEnabled="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="TM/HM" Binding="{Binding TMHM}"/>
+                <DataGridTemplateColumn Header="View">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnView" Content="Remove" Click="TMHM_Remove_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="tmhmSelector" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="835,288,0,0"/>
+        <Button x:Name="tmhmAddButton" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="960,289,0,0" Click="TmhmAddButton_Click"/>
+        <Button x:Name="SaveChangeButton" Content="Save All Changes" HorizontalAlignment="Left" Height="19" Margin="929,340,0,0" VerticalAlignment="Top" Width="105" Click="SaveChangeButton_Click"/>
+    </Grid>
+</Window>
